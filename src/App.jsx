@@ -54,10 +54,10 @@ function App() {
   return (
     <div className="container">
       <div className="header">
-        <div className="badge">AI Image Generator</div>
-        <h1 className="title">Turn words into images</h1>
+        <div className="badge">🕹️ 8-BIT STUDIO</div>
+        <h1 className="title">PIXEL DREAMS</h1>
         <p className="subtitle">
-          Describe anything — Stable Diffusion XL brings it to life.
+          ENTER PROMPT TO INITIALIZE GENERATION
         </p>
       </div>
 
@@ -65,7 +65,7 @@ function App() {
         <input
           className="prompt-input"
           type="text"
-          placeholder="A cinematic shot of a neon city at night, 8K..."
+          placeholder="e.g., A neon cyberpunk street, 16-bit pixel art..."
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -79,17 +79,11 @@ function App() {
         >
           {loading ? (
             <>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ animation: 'spin 0.75s linear infinite' }}>
-                <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-              </svg>
-              Generating
+              [.] RENDERING
             </>
           ) : (
             <>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg>
-              Generate
+              [{'>'}] START
             </>
           )}
         </button>
@@ -101,7 +95,7 @@ function App() {
         {loading && (
           <div className="spinner-wrapper">
             <div className="spinner" />
-            <p className="spinner-text">Generating your image…</p>
+            <p className="spinner-text">PROCESSING...</p>
           </div>
         )}
 
@@ -111,9 +105,9 @@ function App() {
 
         {!loading && !imageUrl && !error && (
           <div className="placeholder-text">
-            <div className="placeholder-icon">🎨</div>
-            Your image will appear here
-            <span>Press Enter or click Generate</span>
+            <div className="placeholder-icon">👾</div>
+            NO DATA LOADED
+            <span>INSERT PROMPT TO START</span>
           </div>
         )}
       </div>
